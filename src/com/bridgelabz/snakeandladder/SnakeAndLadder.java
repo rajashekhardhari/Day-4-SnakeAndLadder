@@ -30,6 +30,9 @@ public class SnakeAndLadder {
 
 			case 1:
 				startPosition += dice;
+				if (startPosition > maxPosition) {
+					startPosition = startPosition - dice;
+				}
 				break;
 
 			case 2:
@@ -39,7 +42,7 @@ public class SnakeAndLadder {
 				break;
 			}
 
-			System.out.println("Start Position:-" + startPosition);
+			System.out.println("End Position:-" + startPosition);
 
 		}
 
