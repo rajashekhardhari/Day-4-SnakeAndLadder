@@ -8,6 +8,7 @@ public class SnakeAndLadder {
 		System.out.println("Welcome to Snake and Ladder Program");
 
 		int startPosition = 0;
+		int diceCount = 0;
 
 		int noPlay = 0;
 		int ladder = 1;
@@ -20,6 +21,7 @@ public class SnakeAndLadder {
 			Random randomNum = new Random();
 			int dice = randomNum.nextInt(6) + 1;
 			System.out.println("Dice Number:-" + dice);
+			diceCount++;
 
 			int checkPlay = (int) Math.floor(Math.random() * 10) % 3;
 			System.out.println("Random Number:-" + checkPlay);
@@ -44,7 +46,10 @@ public class SnakeAndLadder {
 
 			System.out.println("End Position:-" + startPosition);
 
+			System.out.println("Position after Die Roll " + diceCount + " :- " + startPosition);
+
 		}
+		System.out.println("Total Dice Rolls : " + diceCount);
 
 	}
 }
